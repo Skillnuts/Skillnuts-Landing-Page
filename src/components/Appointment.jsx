@@ -18,7 +18,7 @@ const Appointment = () => {
           <h4 className="mb-5">
             {/* Achha lag raha hai na!! <br /> Ab ye reality me kaise hoga woh bhi aapake
             budget main!! */}
-            Achha lag raha hai na!! <br /> Ab ye reality me kaise hoga? woh bhi <br /> apne
+            Achha lag raha hai na!! <br /> Ab ye reality me kaise hoga? woh bhi <br /> aapke
             budget mai!!
           </h4>
           <p className="uppercase font-poppins text-xl lg:text-2xl xl:text-3xl text-primary mb-4">
@@ -36,7 +36,7 @@ const Appointment = () => {
             </button>
           </a>
           <span className="block text-xs md:text-sm 2xl:text-base">
-            (15 Min. Call with Experts)
+            (Talk to Experts)
           </span>
         </div>
       </div>

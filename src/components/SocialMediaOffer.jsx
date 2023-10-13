@@ -34,14 +34,14 @@ function SocialMediaOffer() {
             </p>
           </div>
           <div className="flex flex-col justify-center text-slate-100">
-            <div className="font-bold flex gap-x-2 justify-center items-center lg:flex-row text-3xl 2xl:text-4xl">
+            <div className="font-bold flex gap-x-2 justify-center items-center lg:flex-row">
               <div className="flex gap-x-1 justify-center items-center">
                 <img src={rupee} alt="" width={20} height={20} />
                 <span className="line-through block text-xl 2xl:text-2xl">
                   1,20,000
                 </span>
               </div>
-              <div className="flex gap-x-1 justify-start items-center">
+              <div className="flex gap-x-1 justify-start items-center text-3xl 2xl:text-[42px]">
                 <img src={rupee} alt="" />
                 <span>72,000</span>
               </div>

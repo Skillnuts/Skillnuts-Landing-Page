@@ -75,8 +75,8 @@ export const features = [
     image: featureImg5,
   },
   {
-    title: "Consistantly Increase Profit",
-    subtitle: "Achieving The Brand Trust",
+    title: "Market Expansion",
+    subtitle: "Accelerate Market Growth",
     image: featureImg6,
   },
 ];
@@ -97,7 +97,7 @@ export const offerContent = [
 export const creativeProjects = [
   "https://www.youtube.com/embed/VckBcbWl9dQ",
   "https://www.youtube.com/embed/gJM8LC-zces",
-  "https://www.youtube.com/embed/-A-i0I9lGxo",
+  // "https://www.youtube.com/embed/-A-i0I9lGxo",
   "https://www.youtube.com/embed/TOt2fvMsUis",
   "https://www.youtube.com/embed/Az-R0WWVZbY",
 ];
@@ -167,7 +167,25 @@ export const faqsData = [
     question:
       "What sets your agency apart from others in the industry when it comes to advertising services?",
     answer:
-      "We're not just another advertising agency; we're your creative partners on the journey to remarkable success.",
+      `We're not just another advertising agency; we're your creative partners on the journey to remarkable success.
+
+Unleash Your Brand's Potential: We are artists, storytellers, and strategists all rolled into one.
+We don't just create advertisements; we craft unforgettable brand experiences that leave
+lasting impressions.
+
+Boost Your Sales: Our winning campaigns are designed to do one thing above all – drive results.
+We've got the secret sauce that transforms casual viewers into loyal customers.
+
+Innovate, Don't Imitate: In a world flooded with generic marketing, we stand out by being
+refreshingly different. Our campaigns break boundaries and set trends, ensuring your brand is
+always one step ahead of the competition.
+
+Creativity Knows No Bounds: Whether you need a stunning visual campaign, compelling
+content, or an entire rebranding strategy, we've got the creative chops to make it happen.
+
+Your Success is Our Mission: We're not just here to create advertising; we're here to create
+success stories. Your goals are our goals, and we won't rest until we've exceeded them.
+      `,
   },
 ];
 

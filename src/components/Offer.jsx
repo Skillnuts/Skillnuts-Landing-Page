@@ -45,12 +45,12 @@ function Offer() {
 
         <div className="flex flex-col md:flex-row gap-x-12 gap-y-8 md:justify-between lg:justify-start lg:-ml-5 xl:ml-0 py-4 md:py-8 lg:py-0 mt-4">
           <div className="text-center lg:text-left md:w-max">
-            <h2 className="font-bold text-primary flex gap-x-3 justify-center md:justify-start flex-row text-3xl 2xl:text-4xl mb-4">
+            <h2 className="font-bold text-primary flex gap-x-3 justify-center md:justify-start flex-row mb-4">
               <div className="flex gap-x-2 justify-center md:justify-start items-center">
                 <img src={rupee} alt="" width={20} height={20} />
                 <span className="line-through block text-xl 2xl:text-2xl">2,50,000</span>
               </div>
-              <div className="flex gap-x-2 justify-start items-center">
+              <div className="flex gap-x-2 justify-start items-center text-3xl 2xl:text-[42px]">
                 <img src={rupee} alt="" />
                 <span>88,888</span>
               </div>

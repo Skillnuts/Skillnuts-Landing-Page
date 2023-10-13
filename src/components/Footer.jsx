@@ -61,7 +61,7 @@ const Footer = () => {
               <h5 className="uppercase text-[15px] lg:text-base 2xl:text-xl text-center font-medium">
                 Moneylal ne badali apani Kismat
               </h5>
-              <h2 className="font-bold mb-4 text-center">AB AAPAKI BAARI</h2>
+              <h2 className="font-bold mb-4 text-center">AB AAPKI BAARI</h2>
               <form onSubmit={handleSubmit} autoComplete="off">
                 <label htmlFor="name">
                   <input
@@ -149,10 +149,10 @@ const Footer = () => {
         </div>
 
         <div className="absolute left-0 bottom-0 md:-bottom-40 xl:-bottom-64 2xl:-bottom-[22rem]">
-          <div className="w-full text-center absolute bottom-12 px-2 sm:px-12 md:bottom-20 md:text-xl xl:bottom-24 2xl:bottom-32">
+          <div className="w-full text-center absolute bottom-12 px-1 sm:px-12 md:bottom-20 md:text-xl xl:bottom-24 2xl:bottom-32">
             <p className="font-semibold text-white xl:text-3xl 2xl:text-4xl uppercase w-full ">
               Moneylal ne to le liya, ab apaki bari. <br /> chalo shuruwat kare
-              safalta ki <img src={growthIcon} width={50} className="inline -translate-y-2" />
+              safalta ki <img src={growthIcon} width={50} className="inline -translate-y-3" />
             </p>
 
             <p className="-mb-4 text-xs 2xl:text-sm w-full text-white translate-y-4 md:translate-y-10">
