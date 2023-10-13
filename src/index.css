@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.form-input {
+  @apply py-3.5 px-4 rounded-xl text-sm block w-full mb-4 outline-none;
+}
+.swiper-pagination {
+  @apply !translate-y-8;
+}
+.swiper-pagination-bullet {
+  @apply !border-2 !border-primary !w-2 !h-2;
+}
+.swiper-pagination-bullet-active {
+  @apply !bg-primary !w-2 !h-2;
+}
+
+img {
+  pointer-events: none;
+}
+
+.hero_section::before {
+  content: '';
+  background-image: url('./assets/shape.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -21%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1536px) {
+  .hero_section::before {
+    top: -26%;
+  }
+
+  .form-input {
+    @apply py-2 px-4 rounded-[5px] text-sm block w-full mb-4 outline-none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .hero_section::before {
+    top: -18%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero_section::before {
+    top: -22%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero_section::before {
+    background-position: right;
+    top: -18%;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .drawbacks {
+    display: flex;
+    align-items: center;
+    padding-block: 20px;
+  }
+}
+
+/******** floating-whatsapp CSS ********/
+.floating-whatsapp-button {
+  bottom: 2.5rem;
+}
+
+.floating-whatsapp-chatbox {
+  font-family: "Inter", sans-serif;
+  bottom: 6rem;
+  right: 3rem;
+}
+
+
+.floating-whatsapp-button::after,
+.floating-whatsapp-chatbox header div:nth-child(1)::after {
+  display: none;
+}
+
+.floating-whatsapp-chatbox header div:nth-child(1) img {
+  border-radius: 0;
+  height: 45px;
+  width: 45px;
+  margin-left: 10px;
+}
+
+.floating-whatsapp-chatbox footer button[type="submit"] {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background-color: transparent;
+}
+
+.floating-whatsapp-chatbox footer button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.floating-whatsapp-chatbox footer button svg path {
+  fill: #075e54;
+}
