@@ -13,19 +13,11 @@ function About() {
           ABOUT SKILLNUTS
         </h3>
         <p className="text-base mb-4">
-          At Skillnuts, we're your one-stop solution for innovation, inspiration, and building what you truly love. 
-        </p>
-        
-        <p className="text-base mb-4">
-          We believe in the power of three: yours, ours, and theirs. By bringing them together, magic happens. We're your sidekick, your wingman, your go-to for all things branding. And if something goes wrong, we're in it together to fix it.
+          Think of your brand as a rocketship, ready to soar to new heights. We're the ground control, the engineers, and the navigators guiding your brand's journey to the stars. We architect the blueprint for your brand's exceptional growth.
         </p>
       
         <p className='text-base mb-4'>
-          We engineer brands with the latest trends and technology. We're made to create, wired to delight, and elevate everything around us. From filter kaapi to mocha, espresso, and cappuccino, we take you from zero to a hundred with our expertise. We don't just deliver a brand, we create an experience that lasts long after you've left the coffee house.
-        </p>
-
-        <p className="text-base">
-          With Skillnuts, you'll never be alone on your journey to success. Let's build something amazing together.
+          We unleash your brand's potential and offer innovative solutions that set you apart. Our mission is your success.
         </p>
       </div>
     </section>

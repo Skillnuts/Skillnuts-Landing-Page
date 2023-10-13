@@ -204,5 +204,4 @@ export const businessCategories = [
   { value: "Auto-Mobile", label: "Auto-Mobile" },
   { value: "Service", label: "Service" },
   { value: "E-commerce", label: "E-commerce" },
-  { value: "Other", label: "Other" },
 ];
