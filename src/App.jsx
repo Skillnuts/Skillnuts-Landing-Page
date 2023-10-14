@@ -10,6 +10,7 @@ import Faqs from "./components/Faqs";
 import About from "./components/About";
 import Footer from "./components/footer";
 import WhatsApp from "./common/WhatsApp";
+import Clients from "./components/Clients";
 
 function App() {
   return (
@@ -46,6 +47,18 @@ function App() {
           </div>
 
           <CreativeProjects />
+        </section>
+
+        <section className="container mx-auto mb-10 lg:mb-12">
+          <div className="flex items-center justify-between mb-8">
+            <span className="h-1 w-1/4 bg-secondary block"></span>
+            <h2 className="text-xl lg:text-3xl 2xl:text-4xl text-primary font-semibold text-center py-0">
+              CLIENTS
+            </h2>
+            <span className="h-1 w-1/4 bg-secondary block"></span>
+          </div>
+
+          <Clients />
         </section>
 
         <section className="container mx-auto lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mb-10 lg:mb-12">

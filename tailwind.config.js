@@ -23,7 +23,7 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: "1rem", // 16px
+          DEFAULT: "0.87rem", // 16px
           sm: "1.5rem", // 24px
           md: "1.5rem", // 32px
           lg: "3rem", // 48px

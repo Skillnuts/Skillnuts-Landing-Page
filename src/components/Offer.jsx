@@ -6,7 +6,7 @@ function Offer() {
   const { offerImg, offerCharacter, rupee } = images;
   return (
     <div className="pb-8 mb-6 sm:mb-8 lg:mb-8">
-      <div className="bg-secondary rounded-xl pt-10 lg:py-10 px-4 lg:px-14 mb-3">
+      <div className="bg-secondary rounded-xl pt-10 lg:py-10 px-4 lg:px-14 mb-3 overflow-hidden">
         <div className="flex flex-col justify-center items-center md:flex-row md:justify-between relative">
           <div>
             <div className="flex lg:flex-row items-end lg:items-end mb-4">
@@ -33,11 +33,11 @@ function Offer() {
             </ul>
           </div>
 
-          <div className="">
+          <div className="overflow-hidden">
             <img
               src={offerCharacter}
               alt=""
-              className="w-[200px] md:w-60 lg:w-[280px] xl:w-80 md:absolute -right-2 top-0 md:right-0 lg:-right-10 translate-y-0 md:translate-y-20 lg:translate-y-28 xl:translate-y-12 2xl:translate-y-36"
+              className="w-[200px] md:w-60 lg:w-[280px] xl:w-80 md:absolute -right-2 top-0 md:right-0 lg:-right-10 translate-y-0 md:translate-y-20 lg:translate-y-28 xl:translate-y-[4.2rem] 2xl:translate-y-36"
               loading="lazy"
             />
           </div>
@@ -50,7 +50,7 @@ function Offer() {
                 <img src={rupee} alt="" width={20} height={20} />
                 <span className="line-through block text-xl 2xl:text-2xl">2,50,000</span>
               </div>
-              <div className="flex gap-x-2 justify-start items-center text-3xl 2xl:text-[42px]">
+              <div className="flex gap-x-2 justify-start items-center text-[34px] 2xl:text-[42px]">
                 <img src={rupee} alt="" />
                 <span>88,888</span>
               </div>

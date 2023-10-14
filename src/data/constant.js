@@ -13,6 +13,16 @@ const {
   featureImg4,
   featureImg5,
   featureImg6,
+  archanas,
+  bha,
+  dailycart,
+  foodzx,
+  fybros,
+  meshetkari,
+  mindtale,
+  semichip_jobs,
+  svayurved,
+  telleqs,
 } = images;
 
 export const businessPoints = [
@@ -101,6 +111,20 @@ export const creativeProjects = [
   "https://www.youtube.com/embed/TOt2fvMsUis",
   "https://www.youtube.com/embed/Az-R0WWVZbY",
 ];
+
+// clients logos
+export const logos = [
+  archanas,
+  bha,
+  dailycart,
+  foodzx,
+  fybros,
+  meshetkari,
+  mindtale,
+  semichip_jobs,
+  svayurved,
+  telleqs,
+]
 
 // Frequently Asked Questions (FAQs)
 export const faqsData = [

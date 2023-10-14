@@ -41,7 +41,7 @@ function SocialMediaOffer() {
                   1,20,000
                 </span>
               </div>
-              <div className="flex gap-x-1 justify-start items-center text-3xl 2xl:text-[42px]">
+              <div className="flex gap-x-1 justify-start items-center text-[34px] 2xl:text-[42px]">
                 <img src={rupee} alt="" />
                 <span>72,000</span>
               </div>

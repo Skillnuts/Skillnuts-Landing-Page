@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { images } from "../data/images";
-import Select from "react-tailwindcss-select";
 import { businessCategories } from "../data/constant";
 import axios from "axios";
 
@@ -8,18 +7,30 @@ const Footer = () => {
   const { footerImg, footerBgImg, growthIcon } = images;
   const [formStatus, setFormStatus] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [query, setQuery] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    business_name: '',
-    business_category: '',
-  })
+  const [businessCategoriesData, setBusinessCategoriesData] =
+    useState(businessCategories);
 
-  const handleChange = e => {
-    const {name, value} = e.target
-    setQuery((prevState)=> ({...prevState,[name]:value}))
-  }
+  useEffect(() => {
+    // Sort the business categories alphabetically by label
+    const sortedBusinessCategories = [...businessCategories].sort((a, b) =>
+      a.label.localeCompare(b.label)
+    );
+
+    setBusinessCategoriesData(sortedBusinessCategories);
+  }, []);
+
+  const [query, setQuery] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    business_name: "",
+    business_category: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setQuery((prevState) => ({ ...prevState, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,11 +49,11 @@ const Footer = () => {
       )
       .then(function (response) {
         setQuery({
-          name: '',
-          email: '',
-          phone: '',
-          business_name: '',
-          business_category: '',
+          name: "",
+          email: "",
+          phone: "",
+          business_name: "",
+          business_category: "",
         });
       })
       .catch(function (error) {
@@ -113,24 +124,33 @@ const Footer = () => {
                   />
                 </label>
                 <label htmlFor="business_type">
-                  <select name="business_category" id="business_type" className="form-input" value={query.business_category} onChange={handleChange} required>
+                  <select
+                    name="business_category"
+                    id="business_type"
+                    className="form-input"
+                    value={query.business_category}
+                    onChange={handleChange}
+                    required
+                  >
                     <option value="">Select Category *</option>
-                    {businessCategories.map(({value, label}, i) => (
-                      <option key={i} value={value}>{label}</option>
+                    {businessCategoriesData.map(({ value, label }, i) => (
+                      <option key={i} value={value}>
+                        {label}
+                      </option>
                     ))}
                   </select>
                 </label>
 
-                <p className="text-xs 2xl:text-sm text-primary mt-2">
+                {/* <p className="text-xs 2xl:text-sm text-primary mt-2">
                   We respect your privacy. Any information submitted through
                   this contact form will be used solely for the purpose of
                   communication and will not be shared with any third parties.
-                </p>
+                </p> */}
 
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="rounded-lg text-base 2xl:text-2xl bg-primary py-2 px-5 text-white mt-2 cursor-pointer"
+                    className="rounded-lg text-base 2xl:text-2xl bg-primary py-2 px-5 text-white cursor-pointer"
                   >
                     Book Now
                   </button>
@@ -141,32 +161,88 @@ const Footer = () => {
               <img
                 src={footerImg}
                 alt=""
-                className="w-80 mx-auto 2xl:w-96 lg:translate-y-20 2xl:translate-y-24"
+                className="w-80 mx-auto 2xl:w-96 lg:translate-y-20 2xl:translate-y-10"
                 loading="lazy"
               />
             </div>
           </div>
         </div>
+        
+        <div className="relative z-20">
+          <div className="footer_text bg-primary">
+            <div className="container w-full text-center py-4">
+              <p className="font-semibold text-white text-base xl:text-3xl 2xl:text-4xl uppercase w-full mb-6 ">
+                Moneylal ne to le liya, ab apaki bari. <br /> chalo shuruwat
+                kare safalta ki{" "}
+                <img
+                  src={growthIcon}
+                  className="w-[35px] md:w-[50px] inline -translate-y-2"
+                />
+              </p>
 
-        <div className="absolute left-0 bottom-0 md:-bottom-40 xl:-bottom-64 2xl:-bottom-[22rem]">
-          <div className="w-full text-center absolute bottom-12 px-1 sm:px-12 md:bottom-20 md:text-xl xl:bottom-24 2xl:bottom-32">
-            <p className="font-semibold text-white xl:text-3xl 2xl:text-4xl uppercase w-full ">
-              Moneylal ne to le liya, ab apaki bari. <br /> chalo shuruwat kare
-              safalta ki <img src={growthIcon} width={50} className="inline -translate-y-3" />
-            </p>
+              <p className="mb-4 text-xs 2xl:text-sm w-full text-white">
+                * Results of advertising campaigns may vary as they depend on
+                factors such as the product, sector, target market and market
+                conditions.
+              </p>
 
-            <p className="-mb-4 text-xs 2xl:text-sm w-full text-white translate-y-4 md:translate-y-10">
-              Skillnuts holds all rights to the original content on the website
-              and that any unauthorised duplication or copying may lead to legal
-              action.
-            </p>
+              <p className="mb-4 text-xs 2xl:text-sm w-full text-white">
+                Skillnuts holds all rights to the original content on the
+                website and that any unauthorised duplication or copying may
+                lead to legal action.
+              </p>
+
+              <div className="text-sm 2xl:text-sm w-full text-white text-left">
+                <h5 className="mb-4 underline">Terms & Conditions:</h5>
+
+                <ol className="list-decimal list-inside text-xs 2xl:text-sm grid gap-y-2">
+                  <li>
+                    <strong>Printing Exclusion:</strong> The above-mentioned ad
+                    campaign package specifically excludes any printing work.
+                    Any printing requirements will be considered as additional
+                    services and will be charged separately.
+                  </li>
+                  <li>
+                    <strong>Talent Inclusion:</strong> We are pleased to provide
+                    basic local actors/models for your shoot as part of the
+                    package. However, if you have specific preferences or
+                    requests for particular faces or talents, any additional
+                    charges incurred due to such specific demands will be the
+                    client's responsibility.
+                  </li>
+                  <li>
+                    <strong>Media Buying:</strong> Please note that this ad
+                    campaign package does not include media buying services. We
+                    will offer consultation on beneficial platforms for your
+                    campaign, but the actual media buying process is not covered
+                    within this package.
+                  </li>
+                  <li>
+                    <strong>Campaign Success:</strong> We would like to
+                    emphasise that the success of your campaign is contingent on
+                    various factors, including the quality of your products or
+                    services, your own capacity, and the strategic efforts
+                    invested in advertising. Your company is responsible for
+                    implementing effective strategies, sales processes, and
+                    follow-ups to convert the leads into paying customers.
+                  </li>
+                  <li>
+                    <strong>Additional Materials:</strong> This price is limited
+                    to the scope of work described in the campaign, any
+                    additional work will be charged extra.
+                  </li>
+                  <li>
+                    <strong>Location Responsibility:</strong> The cost and
+                    arrangement for the location of the advert shoot are not
+                    covered within this budget. The client is responsible for
+                    either providing a suitable location from their side or
+                    incurring additional charges for securing an appropriate
+                    location as per the campaign's requirements.
+                  </li>
+                </ol>
+              </div>
+            </div>
           </div>
-          <img
-            src={footerBgImg}
-            alt=""
-            className="w-full mx-auto h-[240px] md:h-full"
-            loading="lazy"
-          />
         </div>
       </footer>
     </>
