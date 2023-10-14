@@ -15,9 +15,9 @@ const HeroSection = () => {
 
             <div>
               <iframe
-                src="https://drive.google.com/file/d/1k3agc1rG1XUqN7W4gAonD3TIgpBTQqKn/preview"
+                src="https://drive.google.com/file/d/1k3agc1rG1XUqN7W4gAonD3TIgpBTQqKn/preview?usp=sharing"
                 allowFullScreen
-                allow="autoplay"
+                allow="autoplay; encrypted-media"
                 className="w-full lg:w-4/5 rounded-xl mx-auto my-6 lg:my-12 aspect-video"
               ></iframe>
             </div>

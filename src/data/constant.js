@@ -61,7 +61,7 @@ export const features = [
   },
   {
     title: "Increase Brand Awareness",
-    subtitle: "Get notice, Get Recognized",
+    subtitle: "Get notice, Get recognized",
     image: featureImg3,
   },
   {
@@ -76,7 +76,7 @@ export const features = [
   },
   {
     title: "Market Expansion",
-    subtitle: "Accelerate Market Growth",
+    subtitle: "Accelerate market growth",
     image: featureImg6,
   },
 ];
@@ -169,23 +169,17 @@ export const faqsData = [
     answer:
       `We're not just another advertising agency; we're your creative partners on the journey to remarkable success.
 
-Unleash Your Brand's Potential: We are artists, storytellers, and strategists all rolled into one.
-We don't just create advertisements; we craft unforgettable brand experiences that leave
-lasting impressions.
+<strong>Unleash Your Brand's Potential:</strong> We are artists, storytellers, and strategists all rolled into one. We don't just create advertisements; we craft unforgettable brand experiences that leave lasting impressions.
 
-Boost Your Sales: Our winning campaigns are designed to do one thing above all – drive results.
-We've got the secret sauce that transforms casual viewers into loyal customers.
+<strong>Boost Your Sales:</strong> Our winning campaigns are designed to do one thing above all – drive results. We've got the secret sauce that transforms casual viewers into loyal customers.
 
-Innovate, Don't Imitate: In a world flooded with generic marketing, we stand out by being
-refreshingly different. Our campaigns break boundaries and set trends, ensuring your brand is
+<strong>Innovate, Don't Imitate:</strong> In a world flooded with generic marketing, we stand out by being refreshingly different. Our campaigns break boundaries and set trends, ensuring your brand is
 always one step ahead of the competition.
 
-Creativity Knows No Bounds: Whether you need a stunning visual campaign, compelling
-content, or an entire rebranding strategy, we've got the creative chops to make it happen.
+<strong>Creativity Knows No Bounds:</strong> Whether you need a stunning visual campaign, compelling content, or an entire rebranding strategy, we've got the creative chops to make it happen.
 
-Your Success is Our Mission: We're not just here to create advertising; we're here to create
-success stories. Your goals are our goals, and we won't rest until we've exceeded them.
-      `,
+<strong>Your Success is Our Mission:</strong> We're not just here to create advertising; we're here to create success stories. Your goals are our goals, and we won't rest until we've exceeded them.
+`,
   },
 ];
 

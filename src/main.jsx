@@ -4,6 +4,7 @@ import WOW from 'wow.js'
 import 'animate.css'
 
 import App from './App.jsx'
+import MetaPixel from './utils/MetaPixel.jsx'
 import './index.css'
 
 const wow = new WOW({
@@ -13,6 +14,7 @@ wow.init();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <MetaPixel />
     <App />
   </React.StrictMode>,
 )

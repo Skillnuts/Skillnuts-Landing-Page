@@ -17,9 +17,7 @@ const FAQ = ({ index, question, answer, isActive, toggle }) => {
         </div>
         {isActive && (
           <pre className="font-inter break-words whitespace-pre-wrap">
-            <p className="px-5 py-4 bg-slate-200 rounded-lg lg:text-lg 2xl:text-xl wow animate__animated animate__fadeIn">
-              {answer}
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: answer }} className="text-primary px-5 py-4 bg-slate-200 rounded-lg lg:text-base 2xl:text-lg wow animate__animated animate__fadeIn" />
           </pre>
         )}
       </div>
