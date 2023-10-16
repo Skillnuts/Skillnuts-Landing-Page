@@ -37,7 +37,7 @@ function Offer() {
             <img
               src={offerCharacter}
               alt=""
-              className="w-[200px] md:w-60 lg:w-[280px] xl:w-80 md:absolute -right-2 top-0 md:right-0 lg:-right-10 translate-y-0 md:translate-y-20 lg:translate-y-28 xl:translate-y-[4.2rem] 2xl:translate-y-36"
+              className="w-[200px] md:w-60 lg:w-[280px] xl:w-80 2xl:w-96 md:absolute -right-2 top-0 md:right-0 lg:-right-10 translate-y-0 md:translate-y-20 lg:translate-y-28 xl:translate-y-[5rem] 2xl:translate-y-[6.5rem]"
               loading="lazy"
             />
           </div>
@@ -50,7 +50,7 @@ function Offer() {
                 <img src={rupee} alt="" width={20} height={20} />
                 <span className="line-through block text-xl 2xl:text-2xl">2,50,000</span>
               </div>
-              <div className="flex gap-x-2 justify-start items-center text-[34px] 2xl:text-[42px]">
+              <div className="flex gap-x-2 justify-start items-center text-[32px] 2xl:text-[42px]">
                 <img src={rupee} alt="" />
                 <span>88,888</span>
               </div>

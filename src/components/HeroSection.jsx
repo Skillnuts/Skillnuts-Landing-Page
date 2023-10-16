@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <>
       <section className="relative hero_section mb-6 sm:mb-8 lg:mb-12">
-        <div className="container mx-auto py-4 lg:pt-12 lg:pb-8 2xl:pt-20">
+        <div className="container mx-auto py-4 lg:pt-4 lg:pb-8 2xl:pt-20 xl:-mt-[10%] lg:-mt-[15%] md:-mt-[10%]">
           <div>
             <h2 className="uppercase text-center -mt-16 text-primary font-bold text-xl lg:text-2xl 2xl:text-4xl">
               Moneylal ne kaise badali apni kismat!

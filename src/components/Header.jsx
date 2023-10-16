@@ -7,12 +7,14 @@ const Header = () => {
     <>
       <header className="bg-primary overflow-hidden relative -z-10">
         <div className="px-4 py-6 lg:px-12 flex justify-between items-center">
-          <img
-            src={logo}
-            alt=""
-            className="w-40 lg:w-56 object-cover"
-            loading="lazy"
-          />
+          <a href="/">
+            <img
+              src={logo}
+              alt=""
+              className="w-40 lg:w-56 object-cover"
+              loading="lazy"
+            />
+          </a>
 
           <img
             src={logo_tagline}
@@ -21,7 +23,7 @@ const Header = () => {
             loading="lazy"
           />
         </div>
-        
+
         <div className="container mx-auto relative pt-6 flex flex-col md:flex-row items-center md: justify-center md:items-start">
           <img
             src={tagline}

@@ -2,11 +2,21 @@ import React, { useEffect, useState } from "react";
 import { images } from "../data/images";
 import { businessCategories } from "../data/constant";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Footer = () => {
   const { footerImg, footerBgImg, growthIcon } = images;
   const [formStatus, setFormStatus] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    business_name: "",
+    business_category: "",
+  });
+
   const [businessCategoriesData, setBusinessCategoriesData] =
     useState(businessCategories);
 
@@ -19,13 +29,6 @@ const Footer = () => {
     setBusinessCategoriesData(sortedBusinessCategories);
   }, []);
 
-  const [query, setQuery] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    business_name: "",
-    business_category: "",
-  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,8 +37,9 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (loading) return;
     setLoading(true);
+
     const formData = new FormData();
     Object.entries(query).forEach(([key, value]) => {
       formData.append(key, value);
@@ -45,9 +49,15 @@ const Footer = () => {
       .post(
         "https://getform.io/f/942d7eb5-7571-4900-a7ac-0ee087826dca",
         formData,
-        { headers: { Accept: "application/json" } }
+        { headers: { 'Content-Type': "application/json" } }
       )
       .then(function (response) {
+        setFormStatus(true);
+        toast.success('Successfully submitted', {
+          position: "top-right",
+          delay: 50,
+          className: 'text-base m-0'
+        })
         setQuery({
           name: "",
           email: "",
@@ -55,9 +65,15 @@ const Footer = () => {
           business_name: "",
           business_category: "",
         });
+        setLoading(false);
       })
       .catch(function (error) {
         console.log(error);
+        toast.error(error, {
+          position: "top-right",
+          delay: 2000,
+        })
+        setLoading(false);
       });
   };
 
@@ -68,12 +84,12 @@ const Footer = () => {
       <footer className="mt-6 lg:mt-12 relative">
         <div className="container mx-auto ">
           <div className="bg-secondary flex flex-col md:flex-row rounded-xl lg:p-5 lg:pt-4 lg:pb-20">
-            <div className="md:w-1/2 md:text-2xl 2xl:text-3xl px-4 md:px-10 py-5 z-20">
+            <div className="md:w-1/2 md:text-2xl 2xl:text-3xl px-4 md:px-10 py-5 z-30">
               <h5 className="uppercase text-[15px] lg:text-base 2xl:text-xl text-center font-medium">
                 Moneylal ne badali apani Kismat
               </h5>
               <h2 className="font-bold mb-4 text-center">AB AAPKI BAARI</h2>
-              <form onSubmit={handleSubmit} autoComplete="off">
+              <form onSubmit={handleSubmit} autoComplete="off" encType="multipart/form-data">
                 <label htmlFor="name">
                   <input
                     type="text"
@@ -141,12 +157,6 @@ const Footer = () => {
                   </select>
                 </label>
 
-                {/* <p className="text-xs 2xl:text-sm text-primary mt-2">
-                  We respect your privacy. Any information submitted through
-                  this contact form will be used solely for the purpose of
-                  communication and will not be shared with any third parties.
-                </p> */}
-
                 <div className="text-center">
                   <button
                     type="submit"
@@ -154,6 +164,7 @@ const Footer = () => {
                   >
                     Book Now
                   </button>
+                  {formStatus && <ToastContainer />}
                 </div>
               </form>
             </div>
@@ -171,12 +182,12 @@ const Footer = () => {
         <div className="relative z-20">
           <div className="footer_text bg-primary">
             <div className="container w-full text-center py-4">
-              <p className="font-semibold text-white text-base xl:text-3xl 2xl:text-4xl uppercase w-full mb-6 ">
+              <p className="font-semibold text-white text-base xl:text-3xl 2xl:text-4xl uppercase w-full mb-6 lg:-mt-4 md:-mt-0 -mt-8">
                 Moneylal ne to le liya, ab apaki bari. <br /> chalo shuruwat
                 kare safalta ki{" "}
                 <img
                   src={growthIcon}
-                  className="w-[35px] md:w-[50px] inline -translate-y-2"
+                  className="w-[35px] md:w-[45px] inline -translate-y-2"
                 />
               </p>
 

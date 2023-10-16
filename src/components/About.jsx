@@ -5,7 +5,7 @@ function About() {
   const { aboutLogo } = images;
   return (
     <section className="container mx-auto lg:flex justify-around gap-x-6 items-center mb-10 lg:mb-12">
-      <div className="lg:w-[25%] 2xl:w-[30%] mb-6 lg:mb-0">
+      <div className="w-[85%] md:w-[60%] lg:w-[25%] 2xl:w-[30%] mx-auto mb-6 lg:mb-0">
         <img src={aboutLogo} alt="" loading="lazy" />
       </div>
       <div className="lg:w-[70%]">

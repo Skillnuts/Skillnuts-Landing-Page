@@ -144,7 +144,7 @@ export const faqsData = [
     id: 3,
     question: "How can targeted advertising benefit my business?",
     answer:
-      "Targeted advertising ensures that your marketing efforts are reaching the right audience, increasing the chances of conversion. It's a cost-effective way to maximize your ROI.",
+      "Targeted advertising ensures that your marketing efforts are reaching the right audience increasing the chances of conversion. It's a cost-effective way to maximize your ROI.",
   },
   {
     id: 4,
@@ -157,7 +157,7 @@ export const faqsData = [
     question:
       "How can I measure the effectiveness of my advertising campaigns?",
     answer:
-      "We use various metrics and analytics to track the performance of your advertising campaigns. This includes assessing click-through rates, conversion rates, ROI, and other Key Performance Indicators (KPIs).",
+      "We use various metrics and analytics to track the performance of your advertising campaigns This includes assessing click-through rates, conversion rates, ROI, and other Key Performance Indicators (KPIs).",
   },
   {
     id: 6,
@@ -171,7 +171,7 @@ export const faqsData = [
     question:
       "How do you determine the most effective advertising strategy for a business?",
     answer:
-      "Our approach involves conducting a thorough analysis of your industry, target audience, competition, and business objectives. We then tailor a customized advertising strategy based on these insights.",
+      "Our approach involves conducting a thorough analysis of your industry, target audience competition, and business objectives. We then tailor a customized advertising strategy based on these insights.",
   },
   {
     id: 8,
@@ -197,13 +197,11 @@ export const faqsData = [
 
 <strong>Boost Your Sales:</strong> Our winning campaigns are designed to do one thing above all – drive results. We've got the secret sauce that transforms casual viewers into loyal customers.
 
-<strong>Innovate, Don't Imitate:</strong> In a world flooded with generic marketing, we stand out by being refreshingly different. Our campaigns break boundaries and set trends, ensuring your brand is
-always one step ahead of the competition.
+<strong>Innovate, Don't Imitate:</strong> In a world flooded with generic marketing, we stand out by being refreshingly different. Our campaigns break boundaries and set trends, ensuring your brand is always one step ahead of the competition.
 
 <strong>Creativity Knows No Bounds:</strong> Whether you need a stunning visual campaign, compelling content, or an entire rebranding strategy, we've got the creative chops to make it happen.
 
-<strong>Your Success is Our Mission:</strong> We're not just here to create advertising; we're here to create success stories. Your goals are our goals, and we won't rest until we've exceeded them.
-`,
+<strong>Your Success is Our Mission:</strong> We're not just here to create advertising; we're here to create success stories. Your goals are our goals, and we won't rest until we've exceeded them.`,
   },
 ];
 
