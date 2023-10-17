@@ -6,9 +6,9 @@ const HeroSection = () => {
   const { businessCharacter } = images;
   return (
     <>
-      <section className="relative hero_section mb-6 sm:mb-8 lg:mb-12">
-        <div className="container mx-auto py-4 lg:pt-4 lg:pb-8 2xl:pt-20 xl:-mt-[10%] lg:-mt-[15%] md:-mt-[10%]">
-          <div>
+      <section className="relative hero_section mb-6 sm:mb-8 lg:mb-12 z-20">
+        <div className="container mx-auto md:pt-8 lg:pt-[4.5rem] lg:pb-4 2xl:pt-[11.5rem] xl:pt-24 2xl:-mt-[20%] xl:-mt-[25%] lg:-mt-[30%] md:-mt-[25%] -mt-[10%]">
+          {/* <div>
             <h2 className="uppercase text-center -mt-16 text-primary font-bold text-xl lg:text-2xl 2xl:text-4xl">
               Moneylal ne kaise badali apni kismat!
             </h2>
@@ -21,14 +21,14 @@ const HeroSection = () => {
                 className="w-full lg:w-4/5 rounded-xl mx-auto my-6 lg:my-12 aspect-video"
               ></iframe>
             </div>
-          </div>
+          </div> */}
 
-          <div className="py-6 md:flex md:items-center md:justify-between gap-4 lg:gap-12 drawbacks">
+          <div className="pb-6 md:flex md:items-center md:justify-between gap-4 lg:gap-12 drawbacks">
             <div className="row-span-2 md:w-[25%]">
               <img
                 src={businessCharacter}
                 alt=""
-                className="w-52 lg:w-64 2xl:w-80 mx-auto"
+                className="w-56 lg:w-64 2xl:w-80 mx-auto"
                 loading="lazy"
               />
             </div>

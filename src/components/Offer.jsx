@@ -1,6 +1,7 @@
 import React from "react";
 import { offerContent } from "../data/constant";
 import { images } from "../data/images";
+import PopUpForm from "../common/PopUpForm";
 
 function Offer() {
   const { offerImg, offerCharacter, rupee } = images;
@@ -56,14 +57,15 @@ function Offer() {
               </div>
             </h2>
             <div className="w-max mx-auto">
-              <a
+              {/* <a
                 href="https://tidycal.com/skillnuts/15-minute-meeting"
                 target="_blank"
               >
                 <button className="py-3 px-8 rounded-xl bg-primary font-bold text-white text-xl 2xl:text-2xl mb-2">
                   Book Now
                 </button>
-              </a>
+              </a> */}
+              <PopUpForm />
               <p className="text-xs 2xl:text-base font-medium text-center">(Limited Time Offer)</p>
             </div>
           </div>

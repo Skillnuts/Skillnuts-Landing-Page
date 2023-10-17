@@ -23,7 +23,7 @@ function App() {
 
         <Features />
 
-        <section className="container mx-auto mb-8 lg:mb-12">
+        <section className="container mx-auto mb-8 lg:mb-12" id="offers_section">
           <div className="flex items-center justify-between mb-4 2xl:mb-8">
             <span className="text-xl 2xl:text-3xl font-medium">
               {/* Aapke Sapno ko Pura Karne ka Rasta */}

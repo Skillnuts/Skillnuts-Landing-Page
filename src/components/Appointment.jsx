@@ -1,5 +1,6 @@
 import React from "react";
 import { images } from "../data/images";
+import PopUpForm from "../common/PopUpForm";
 
 const Appointment = () => {
   const {appointmentCharacter} = images
@@ -27,14 +28,15 @@ const Appointment = () => {
         </div>
 
         <div className="text-center self-center order-3 col-span-2 lg:col-span-1">
-          <a
+          {/* <a
             href="https://tidycal.com/skillnuts/15-minute-meeting"
             target="_blank"
           >
             <button className="py-3 px-8 rounded-xl bg-primary font-bold text-white text-lg md:text-xl 2xl:text-2xl mb-2">
               Book Now
             </button>
-          </a>
+          </a> */}
+          <PopUpForm />
           <span className="block text-xs md:text-sm 2xl:text-base">
             (Talk to Experts)
           </span>

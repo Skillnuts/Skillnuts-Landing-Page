@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { images } from "../data/images";
 import { businessCategories } from "../data/constant";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
-  const { footerImg, footerBgImg, growthIcon } = images;
+  const { footerImg, growthIcon } = images;
   const [formStatus, setFormStatus] = useState(false);
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState({
@@ -17,18 +17,10 @@ const Footer = () => {
     business_category: "",
   });
 
-  const [businessCategoriesData, setBusinessCategoriesData] =
-    useState(businessCategories);
-
-  useEffect(() => {
-    // Sort the business categories alphabetically by label
-    const sortedBusinessCategories = [...businessCategories].sort((a, b) =>
-      a.label.localeCompare(b.label)
-    );
-
-    setBusinessCategoriesData(sortedBusinessCategories);
-  }, []);
-
+  // Sort the business categories alphabetically by label
+  const sortedBusinessCategories = [...businessCategories].sort((a, b) =>
+    a.label.localeCompare(b.label)
+  );
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,15 +41,15 @@ const Footer = () => {
       .post(
         "https://getform.io/f/942d7eb5-7571-4900-a7ac-0ee087826dca",
         formData,
-        { headers: { 'Content-Type': "application/json" } }
+        { headers: { "Content-Type": "application/json" } }
       )
       .then(function (response) {
         setFormStatus(true);
-        toast.success('Successfully submitted', {
+        toast.success("Successfully submitted", {
           position: "top-right",
           delay: 50,
-          className: 'text-base m-0'
-        })
+          className: "text-base m-0",
+        });
         setQuery({
           name: "",
           email: "",
@@ -72,7 +64,7 @@ const Footer = () => {
         toast.error(error, {
           position: "top-right",
           delay: 2000,
-        })
+        });
         setLoading(false);
       });
   };
@@ -89,7 +81,11 @@ const Footer = () => {
                 Moneylal ne badali apani Kismat
               </h5>
               <h2 className="font-bold mb-4 text-center">AB AAPKI BAARI</h2>
-              <form onSubmit={handleSubmit} autoComplete="off" encType="multipart/form-data">
+              <form
+                onSubmit={handleSubmit}
+                autoComplete="off"
+                encType="multipart/form-data"
+              >
                 <label htmlFor="name">
                   <input
                     type="text"
@@ -149,7 +145,7 @@ const Footer = () => {
                     required
                   >
                     <option value="">Select Category *</option>
-                    {businessCategoriesData.map(({ value, label }, i) => (
+                    {sortedBusinessCategories.map(({ value, label }, i) => (
                       <option key={i} value={value}>
                         {label}
                       </option>
@@ -178,7 +174,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="relative z-20">
           <div className="footer_text bg-primary">
             <div className="container w-full text-center py-4">

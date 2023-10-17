@@ -18,7 +18,7 @@ const WhatsApp = () => {
       <FloatingWhatsApp
         phoneNumber="9370173578"
         accountName="Skillnuts"
-        chatMessage="Hello there, looking forward to work with you"
+        chatMessage={`Hello there,\nHow can I help you?`}
         avatar={favicon}
         messages={messages}
         statusMessage="Connect Better, Grow Faster"

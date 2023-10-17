@@ -1,8 +1,18 @@
 import React from "react";
 import { images } from "../data/images";
+import { motion } from "framer-motion";
+import { HiOutlineArrowCircleDown } from "react-icons/hi";
 
 const Header = () => {
   const { logo, logo_tagline, tagline, heroImg } = images;
+
+  const scrollToSection = () => {
+    const section = document.getElementById("offers_section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <header className="bg-primary overflow-hidden relative -z-10">
@@ -25,12 +35,13 @@ const Header = () => {
         </div>
 
         <div className="container mx-auto relative pt-6 flex flex-col md:flex-row items-center md: justify-center md:items-start">
-          <img
-            src={tagline}
-            alt=""
-            className="w-64 lg:w-80 mx-auto lg:mx-0 md:mt-28"
-            loading="lazy"
-          />
+          <div className="w-64 lg:w-80 mx-auto lg:mx-0 md:mt-28 grid place-items-center gap-y-8">
+            <img src={tagline} alt="" className="" loading="lazy" />
+
+            <div className="down-arrow relative z-10">
+              <HiOutlineArrowCircleDown className="arrow cursor-pointer" onClick={scrollToSection} />
+            </div>
+          </div>
           <img
             src={heroImg}
             alt=""
