@@ -96,7 +96,7 @@ const PopUpForm = () => {
         <Modal
           isOpen={isModalOpen}
           contentLabel="form-modal"
-          className="w-[92%] md:w-[75%] lg:w-[40%] bg-secondary  rounded-lg relative top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50"
+          className="w-[92%] md:w-[75%] lg:w-[45%] bg-secondary  rounded-lg relative top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
         >
           <IoCloseCircleOutline
             onClick={closeModal}
@@ -104,10 +104,10 @@ const PopUpForm = () => {
           />
 
           <div className="md:text-2xl 2xl:text-3xl px-4 md:px-10 py-5 z-30">
-            <h5 className="uppercase text-[15px] lg:text-base 2xl:text-xl text-center font-medium">
+            {/* <h5 className="uppercase text-[15px] lg:text-base 2xl:text-xl text-center font-medium">
               Apko kismat badlni hai
-            </h5>
-            <h2 className="font-bold mb-4 text-center">AB AAPKI BAARI</h2>
+            </h5> */}
+            <h2 className="font-bold mb-4 text-center">Connect With Us</h2>
             <form
               onSubmit={handleSubmit}
               autoComplete="off"
@@ -180,10 +180,16 @@ const PopUpForm = () => {
                 </select>
               </label>
 
+              <p className="text-xs mb-4 pl-2">
+                We prioritize safeguarding your personal information and ensure
+                its confidentiality and responsible handling.
+              </p>
+
               <div className="text-center">
                 <button
                   type="submit"
-                  className="rounded-lg text-base 2xl:text-2xl bg-primary py-2 px-5 text-white cursor-pointer"
+                  // className="rounded-lg text-base 2xl:text-2xl bg-primary py-2 px-5 text-white cursor-pointer"
+                  className="py-2 px-5 rounded-lg bg-primary font-bold text-white text-xl 2xl:text-2xl mb-2"
                 >
                   Book Now
                 </button>

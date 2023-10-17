@@ -76,7 +76,7 @@ const Footer = () => {
       <footer className="mt-6 lg:mt-12 relative">
         <div className="container mx-auto ">
           <div className="bg-secondary flex flex-col md:flex-row rounded-xl lg:p-5 lg:pt-4 lg:pb-20">
-            <div className="md:w-1/2 md:text-2xl 2xl:text-3xl px-4 md:px-10 py-5 z-30">
+            <div className="lg:1/2 md:w-[75%] md:text-2xl 2xl:text-3xl px-4 md:px-10 py-5 z-30">
               <h5 className="uppercase text-[15px] lg:text-base 2xl:text-xl text-center font-medium">
                 Moneylal ne badali apani Kismat
               </h5>
@@ -153,10 +153,15 @@ const Footer = () => {
                   </select>
                 </label>
 
+                <p className="text-xs mb-4 pl-2">
+                  We prioritize safeguarding your personal information and
+                  ensure its confidentiality and responsible handling.
+                </p>
+
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="rounded-lg text-base 2xl:text-2xl bg-primary py-2 px-5 text-white cursor-pointer"
+                    className="rounded-lg text-base 2xl:text-2xl bg-primary py-2 px-5 text-white cursor-pointer mb-6"
                   >
                     Book Now
                   </button>
@@ -168,7 +173,7 @@ const Footer = () => {
               <img
                 src={footerImg}
                 alt=""
-                className="w-80 mx-auto 2xl:w-96 lg:translate-y-20 2xl:translate-y-10"
+                className="w-80 mx-auto 2xl:w-96 md:translate-y-20 lg:translate-y-20 2xl:translate-y-10"
                 loading="lazy"
               />
             </div>

@@ -6,9 +6,10 @@ const HeroSection = () => {
   const { businessCharacter } = images;
   return (
     <>
-      <section className="relative hero_section mb-6 sm:mb-8 lg:mb-12 z-20">
-        <div className="container mx-auto md:pt-8 lg:pt-[4.5rem] lg:pb-4 2xl:pt-[11.5rem] xl:pt-24 2xl:-mt-[20%] xl:-mt-[25%] lg:-mt-[30%] md:-mt-[25%] -mt-[10%]">
-          {/* <div>
+      <section className="relative mb-6 sm:mb-8 lg:mb-12">
+        <div className="hero_section">
+          <div className="container mx-auto md:pt-8 lg:pt-[4.5rem] lg:pb-4 2xl:pt-[11.5rem] xl:pt-24 2xl:-mt-[20%] xl:-mt-[25%] lg:-mt-[30%] md:-mt-[25%] -mt-[10%]">
+            {/* <div>
             <h2 className="uppercase text-center -mt-16 text-primary font-bold text-xl lg:text-2xl 2xl:text-4xl">
               Moneylal ne kaise badali apni kismat!
             </h2>
@@ -23,38 +24,39 @@ const HeroSection = () => {
             </div>
           </div> */}
 
-          <div className="pb-6 md:flex md:items-center md:justify-between gap-4 lg:gap-12 drawbacks">
-            <div className="row-span-2 md:w-[25%]">
-              <img
-                src={businessCharacter}
-                alt=""
-                className="w-56 lg:w-64 2xl:w-80 mx-auto"
-                loading="lazy"
-              />
-            </div>
+            <div className="pb-6 md:flex md:items-center md:justify-between gap-4 lg:gap-12 drawbacks">
+              <div className="row-span-2 md:w-[25%]">
+                <img
+                  src={businessCharacter}
+                  alt=""
+                  className="w-56 lg:w-64 2xl:w-80 mx-auto"
+                  loading="lazy"
+                />
+              </div>
 
-            <div className="md:w-[70%]">
-              <div className="grid md:grid-cols-2 place-content-center gap-4 lg:gap-5">
-                {businessPoints.map((value, i) => {
-                  return (
-                    <div
-                      key={i}
-                      className="flex items-center gap-2 md:gap-0 py-1"
-                    >
-                      <img
-                        src={value.image}
-                        alt=""
-                        className="w-12 lg:w-16 2xl:w-20 mr-2 lg:mr-4"
-                        loading="lazy"
-                      />
-                      <pre className="font-inter">
-                        <h4 className="text-lg md:text-base lg:text-xl 2xl:text-2xl font-semibold">
-                          {value.title}
-                        </h4>
-                      </pre>
-                    </div>
-                  );
-                })}
+              <div className="md:w-[70%]">
+                <div className="grid md:grid-cols-2 place-content-center gap-4 lg:gap-5">
+                  {businessPoints.map((value, i) => {
+                    return (
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 md:gap-0 py-1"
+                      >
+                        <img
+                          src={value.image}
+                          alt=""
+                          className="w-12 lg:w-16 2xl:w-20 mr-2 lg:mr-4"
+                          loading="lazy"
+                        />
+                        <pre className="font-inter">
+                          <h4 className="text-lg md:text-base lg:text-xl 2xl:text-2xl font-semibold">
+                            {value.title}
+                          </h4>
+                        </pre>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

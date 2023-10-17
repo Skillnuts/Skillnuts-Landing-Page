@@ -44,7 +44,7 @@ function CreativeProjects() {
             centeredSlides={true}
             spaceBetween={10}
             slidesPerView={1}
-            className="!overflow-y-visible"
+            className="!overflow-y-visible z-0"
             loop={true}
             onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
             speed={700}

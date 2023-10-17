@@ -20,7 +20,7 @@ body {
 }
 
 .form-input {
-  @apply py-3.5 px-4 rounded-xl text-sm block w-full mb-4 outline-none;
+  @apply py-3 px-4 rounded-xl text-sm block w-full mb-4 outline-none;
 }
 .swiper-pagination {
   @apply !translate-y-8;
@@ -168,13 +168,16 @@ img {
   height: 45px;
   width: 45px;
   margin-left: 10px;
+  border: none;
 }
+
 
 .floating-whatsapp-chatbox footer button[type="submit"] {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   display: grid;
+  justify-self: end;
   place-content: center;
   background-color: transparent;
 }
